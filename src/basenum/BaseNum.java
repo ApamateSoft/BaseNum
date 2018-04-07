@@ -202,14 +202,6 @@ public class BaseNum implements Serializable {
 
     }
     
-    public String printAlphabet() {
-        String o = "";
-        o += "BaseNum v1.0.0: alphabet\n";
-        o += "Code -> Character\n";
-        for(byte i=0; i<alphabet.length; i++) o += i+" -> "+alphabet[i]+"\n";
-        return o;
-    }
-    
     public byte[] getBytes(long dec) {
         byte n = (byte) (dec==0 ?1 :Math.ceil(Math.log10(dec+1)/Math.log10(base)));
         byte[] out = new byte[n];
@@ -251,11 +243,19 @@ public class BaseNum implements Serializable {
         return toLong(toBytes(in));
     }
     
-    private byte[] invert(byte[] in) {
+    public byte[] invert(byte[] in) {
         byte n = (byte) in.length;
         byte[] out = new byte[n];
         for(byte i=0; i<n; i++) out[i] = in[n-i-1];
         return out;
     }
     
+    public String printAlphabet() {
+        String o = "";
+        o += "BaseNum v1.0.0: alphabet\n";
+        o += "Code -> Character\n";
+        for(byte i=0; i<alphabet.length; i++) o += i+" -> "+alphabet[i]+"\n";
+        return o;
+    }
+
 }
