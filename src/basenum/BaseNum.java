@@ -4,7 +4,7 @@ import java.io.Serializable;
 
  /**
  * @author ApamateSoft
- * @version 1.0.0
+ * @version 1.0.2
  */
 
 public class BaseNum implements Serializable {
@@ -252,7 +252,7 @@ public class BaseNum implements Serializable {
     
     public String printAlphabet() {
         String o = "";
-        o += "BaseNum v1.0.0: alphabet\n";
+        o += "BaseNum v1.0.2: alphabet\n";
         o += "Code -> Character\n";
         for(byte i=0; i<alphabet.length; i++) o += i+" -> "+alphabet[i]+"\n";
         return o;
